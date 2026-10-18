@@ -23,10 +23,11 @@ LOCAL_SRC_FILES    := etc/fstab.mt6761
 LOCAL_MODULE_PATH  := $(TARGET_VENDOR_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE       := fstab.mt8766
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/fstab.mt8766
-LOCAL_MODULE_PATH  := $(TARGET_VENDOR_ROOT_OUT)
-include $(BUILD_PREBUILT)
+# Remove or comment out this section entirely:
+# include $(CLEAR_VARS)
+# LOCAL_MODULE       := fstab.mt8766
+# LOCAL_MODULE_TAGS  := optional
+# LOCAL_MODULE_CLASS := ETC
+# LOCAL_SRC_FILES    := etc/fstab.mt8766
+# LOCAL_MODULE_PATH  := $(TARGET_VENDOR_ROOT_OUT)
+# include $(BUILD_PREBUILT)
