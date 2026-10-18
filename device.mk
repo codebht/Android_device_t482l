@@ -30,9 +30,6 @@ PRODUCT_CHARACTERISTICS := tablet
 
 # Rootdir
 PRODUCT_PACKAGES += \
-
-PRODUCT_PACKAGES += \
-    fstab.mt8766 \
     init.items.rc \
     meta_init.modem.rc \
     init.project.rc \
@@ -56,7 +53,7 @@ PRODUCT_PACKAGES += \
     init.rc \
     init.recovery.mt6761.rc \
     init.recovery.mt8766.rc \
-    ueventd.rc \
+    ueventd.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt8766:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt8766
