@@ -51,8 +51,6 @@ PRODUCT_PACKAGES += \
     init.mt8766.rc \
     meta_init.rc \
     init.rc \
-    init.recovery.mt6761.rc \
-    init.recovery.mt8766.rc \
     ueventd.rc
 
 PRODUCT_COPY_FILES += \
