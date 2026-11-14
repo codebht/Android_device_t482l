@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2023 The LineageOS Project
 #
@@ -7,7 +8,7 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# fastbootd
+# Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
@@ -48,11 +49,11 @@ PRODUCT_PACKAGES += \
     init.mt6761.usb.rc \
     init.modem.rc \
     factory_init.project.rc \
-    init.mt8766.rc \
     meta_init.rc \
     init.rc \
     ueventd.rc
 
+# Fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt8766:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt8766
 
@@ -63,5 +64,5 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Inherit the proprietary files
+# Inherit proprietary files
 $(call inherit-product, vendor/acer/AcerOne8T482L/AcerOne8T482L-vendor.mk)
