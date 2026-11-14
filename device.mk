@@ -1,68 +1,155 @@
 
-#
-# Copyright (C) 2023 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
+//
+// Copyright (C) 2023 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+// Init scripts
 
-# Fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-mock \
-    fastbootd
+prebuilt_etc {
+    name: "init.items.rc",
+    src: "etc/init.items.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
 
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+prebuilt_etc {
+    name: "meta_init.modem.rc",
+    src: "etc/meta_init.modem.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
 
-# Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
+prebuilt_etc {
+    name: "init.project.rc",
+    src: "etc/init.project.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
 
-# Partitions
-PRODUCT_BUILD_SUPER_PARTITION := false
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+prebuilt_etc {
+    name: "multi_init.rc",
+    src: "etc/multi_init.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
 
-# Product characteristics
-PRODUCT_CHARACTERISTICS := tablet
+prebuilt_etc {
+    name: "init.sensor_1_0.rc",
+    src: "etc/init.sensor_1_0.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
 
-# Rootdir
-PRODUCT_PACKAGES += \
-    init.items.rc \
-    meta_init.modem.rc \
-    init.project.rc \
-    multi_init.rc \
-    init.sensor_1_0.rc \
-    init.apps.rc \
-    meta_init.project.rc \
-    init.aee.rc \
-    factory_init.items.rc \
-    meta_init.connectivity.rc \
-    init.mt6761.rc \
-    factory_init.connectivity.rc \
-    init.connectivity.rc \
-    factory_init.rc \
-    init.ago.rc \
-    init.mt6761.usb.rc \
-    init.modem.rc \
-    factory_init.project.rc \
-    meta_init.rc \
-    init.rc \
-    ueventd.rc
+prebuilt_etc {
+    name: "init.apps.rc",
+    src: "etc/init.apps.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
 
-# Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt8766:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt8766
+prebuilt_etc {
+    name: "meta_init.project.rc",
+    src: "etc/meta_init.project.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
 
-# Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 29
+prebuilt_etc {
+    name: "init.aee.rc",
+    src: "etc/init.aee.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
 
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+prebuilt_etc {
+    name: "factory_init.items.rc",
+    src: "etc/factory_init.items.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
 
-# Inherit proprietary files
-$(call inherit-product, vendor/acer/AcerOne8T482L/AcerOne8T482L-vendor.mk)
+prebuilt_etc {
+    name: "meta_init.connectivity.rc",
+    src: "etc/meta_init.connectivity.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6761.rc",
+    src: "etc/init.mt6761.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "factory_init.connectivity.rc",
+    src: "etc/factory_init.connectivity.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.connectivity.rc",
+    src: "etc/init.connectivity.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "factory_init.rc",
+    src: "etc/factory_init.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.ago.rc",
+    src: "etc/init.ago.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6761.usb.rc",
+    src: "etc/init.mt6761.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.modem.rc",
+    src: "etc/init.modem.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "factory_init.project.rc",
+    src: "etc/factory_init.project.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt8766.rc",
+    src: "etc/init.mt8766.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "meta_init.rc",
+    src: "etc/meta_init.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+// Fstab
+prebuilt_etc {
+    name: "fstab.mt8766",
+    src: "etc/fstab.mt8766",
+    vendor: true,
+}
