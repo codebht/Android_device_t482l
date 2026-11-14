@@ -1,5 +1,3 @@
-
-#
 # Copyright (C) 2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -28,6 +26,16 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Product characteristics
 PRODUCT_CHARACTERISTICS := tablet
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
 
 # Rootdir
 PRODUCT_PACKAGES += \
