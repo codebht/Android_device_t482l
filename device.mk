@@ -44,7 +44,6 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    fstab.mt8766 \
     init.items.rc \
     meta_init.modem.rc \
     init.project.rc \
@@ -63,12 +62,9 @@ PRODUCT_PACKAGES += \
     init.mt6761.usb.rc \
     init.modem.rc \
     factory_init.project.rc \
-    init.mt8766.rc \
     meta_init.rc \
     init.rc \
-    init.recovery.mt6761.rc \
-    init.recovery.mt8766.rc \
-    ueventd.rc \
+    ueventd.rc
 
 # Fstab
 PRODUCT_COPY_FILES += \
