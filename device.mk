@@ -69,7 +69,8 @@ PRODUCT_PACKAGES += \
 
 # Fstab
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt8766:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt8766
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt8766:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt8766 \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt8766:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6761
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
